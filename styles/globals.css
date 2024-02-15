@@ -2,32 +2,129 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: rgb(49, 48, 48);
+  color: rgb(216, 216, 216); 
+  font-family: 'Helvetica', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+nav {
+  background-color: rgb(93, 92, 92); 
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between; 
 }
+
+nav .links {
+  display: flex;
+  justify-content: flex-end; 
+}
+
+nav a {
+  color: #280c46; 
+  text-decoration: none; 
+  margin-left: 20px; 
+  font-size: 18px; 
+}
+
+nav a:hover {
+  text-decoration: underline; 
+}
+
+h1 {
+  font-size: 50px;
+  margin-top: 0px;
+  font-weight: bold;
+  margin-top: 0px;
+  color: #280c46;
+}
+
+h2 {
+  font-size: 40px;
+  color: #c0c0c0;
+  font-weight: bold;
+}
+
+h3 {
+  text-align: center;
+  font-size: 23px;
+}
+.pic {
+  margin-top: 90px;
+  width: 400px; 
+  height: auto; 
+  margin-right: 20px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+}
+.overlay {
+  position: absolute;
+  margin-top: 90px;
+  width: 400px; 
+  height: auto; 
+  margin-right: 20px; 
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80%;
+  width: 55%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #4e4d4d;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 17px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+.text a {
+  color: #221b42;
+  text-decoration: underline; /* Underline link on hover */
+}
+a {
+  color: #185ba3;
+  text-decoration: none;
+  text-align: center;
+}
+a:hover {
+  text-decoration: underline;
+}
+.link{
+  text-align: center;
+  font-size: 30px;
+
+}
+.footer {
+  margin-top: 400px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+
+  
+
+  
